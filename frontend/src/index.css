@@ -1,0 +1,271 @@
+/* Глобальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Стилі для форми входу/реєстрації */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.auth-form input {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.auth-form button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.auth-form button:hover {
+  background-color: #45a049;
+}
+
+.auth-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffcdd2;
+  border: 1px solid #d32f2f;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-form a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+/* Загальні стилі сторінки керування */
+.boiler-control-page {
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.control-panel {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.power-button, .mode-button, .emergency-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.power-button.on { background-color: #f44336; }
+.power-button.on:hover { background-color: #d32f2f; }
+.power-button.off { background-color: #4CAF50; }
+.power-button.off:hover { background-color: #45a049; }
+
+.mode-button.auto { background-color: #2196F3; }
+.mode-button.auto:hover { background-color: #1976d2; }
+.mode-button.manual { background-color: #FF9800; }
+.mode-button.manual:hover { background-color: #f57c00; }
+
+.emergency-button {
+    background-color: #b71c1c;
+    margin-left: auto;
+}
+.emergency-button:hover {
+    background-color: #8a0000;
+}
+
+.logout-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #607D8B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #455a64;
+}
+
+.main-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.setpoints-section, .parameters-section, .manual-controls-section, .chart-container { /* phone-management-section видалено */
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2, h3 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 12px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+    color: #555;
+    font-size: 0.9em;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table input[type="number"] {
+  width: 90px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: right;
+  font-size: 1em;
+}
+
+.manual-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.control-button {
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #607D8B;
+  transition: background-color 0.2s;
+}
+
+.control-button.active {
+  background-color: #4CAF50;
+}
+
+.control-button:hover {
+    opacity: 0.9;
+}
+
+.chart-container {
+  grid-column: span 1;
+}
+
+@media (min-width: 1280px) {
+  .chart-container {
+    grid-column: span 2;
+  }
+  .main-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.unit-label {
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.parameter-value {
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.parameter-value.normal {
+  color: #2e7d32;
+}
+
+.parameter-value.danger {
+  color: #d32f2f;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
